@@ -9,6 +9,7 @@ RUN requirements="libpng12-dev libjpeg-dev libjpeg62-turbo libmcrypt4 libmcrypt-
     && docker-php-ext-install mcrypt \
     && docker-php-ext-install mbstring \
     && docker-php-ext-install soap \
+    && docker-php-ext-install intl \
     && requirementsToRemove="libpng12-dev libjpeg-dev libmcrypt-dev libcurl3-dev libxml2-dev" \
     && apt-get purge --auto-remove -y $requirementsToRemove
 
